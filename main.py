@@ -18,5 +18,7 @@ for bb in block_sizes :
   
 # And plot a graph
 plt.plot( block_sizes, errors, 'k.-' )
+plt.xlabel("Size of blocks")
+plt.ylabel("Error")
 plt.savefig("myplot.png")
 
