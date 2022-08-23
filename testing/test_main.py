@@ -9,6 +9,8 @@ except:
 
 import AutoFeedback.plotchecks as pc
 from AutoFeedback.plotclass import line
+import unittest
+from main import *
 
 myeng = np.loadtxt("energies")[:,1]
 xvals, yvals, k = [10,20,30,40,60,100,120,200,300,400], np.zeros(10), 0
@@ -36,5 +38,5 @@ class UnitTests(unittest.TestCase) :
             outputs.append( yvals[i] )
         assert( check_func('block_average',inputs, variables ) )
 
-   def test_plot(self):
+    def test_plot(self):
        assert( pc.check_plot([line1],explabels=axislabels,explegend=False,output=True) )
