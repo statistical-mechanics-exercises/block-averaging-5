@@ -33,7 +33,7 @@ axislabels=["Size of blocks", "Error"]
 class UnitTests(unittest.TestCase) :
     def test_blockVals(self) :
         inputs, outputs = [], []
-        for i in len(xvals) : 
+        for i in range(len(xvals)) : 
             inputs.append((xvals[i],myeng,))
             outputs.append( yvals[i] )
         assert( check_func('block_average',inputs, variables ) )
