@@ -36,7 +36,7 @@ class UnitTests(unittest.TestCase) :
         for i in range(len(xvals)) : 
             inputs.append((xvals[i],myeng,))
             outputs.append( yvals[i] )
-        assert( check_func('block_average',inputs, variables ) )
+        assert( check_func('block_average',inputs,outputs ) )
 
     def test_plot(self):
        assert( pc.check_plot([line1],explabels=axislabels,explegend=False,output=True) )
